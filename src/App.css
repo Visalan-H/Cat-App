@@ -1,0 +1,17 @@
+.cards {
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &>* {
+        width: 25.1%;
+    }
+}
+
+.cards.dark {
+    background-color: #2a2438;
+}
+
+.cards.light{
+    background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+}
