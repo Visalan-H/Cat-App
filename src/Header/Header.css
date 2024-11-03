@@ -1,6 +1,6 @@
 .header_main {
     z-index: 1;
-    background-color: black;
+    background-color: #2a2438;
     padding: 0 6.65%;
     border-bottom: 1px solid #777;
     backdrop-filter: blur(5px);
@@ -13,8 +13,20 @@
 
 .header_main * {
     cursor: pointer;
-    color: white;
 }
+
 .logo {
     flex-basis: 15%;
+
+    & h2.light {
+        background: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+        color: transparent;
+        background-clip: text;
+    }
+}
+
+
+.header_main.dark {
+    background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+    color: #2a2438;
 }
