@@ -6,7 +6,7 @@ function Card(props) {
     return (
         <div className="card_main light">
             <div className="image">
-                <img src={`src/assets/cats/cat.${props.n}.jpg`} alt="cat" />
+                <img src={`cats/cat.${props.n}.jpg`} alt="cat" />
             </div>
             <div className="content">
                 <h3 className='light'>Cat {(props.n) + 1}</h3>
