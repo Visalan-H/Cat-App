@@ -6,15 +6,16 @@
     margin: 50px 0;
     background-color: #2a2438;
     border-radius: 15px;
-    box-shadow: 0 0 8px black;
+    box-shadow: 0 0 12px 1px #2a2438;
     text-align: center;
     position: relative;
-    color: white;
+    color: #ffecd2;
 }
 
 .card_main.dark {
     background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
-    color: black;
+    color: #2a2438;
+    box-shadow: 0 0 12px 1px #ffecd2;
 }
 
 .image {
