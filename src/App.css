@@ -1,10 +1,11 @@
 .cards {
     display: flex;
-    padding: 50px 100px;
+    width: 100%;
+    padding: 50px 6.65%;
     justify-content: space-between;
     flex-wrap: wrap;
     &>* {
-        width: 25.1%;
+        width: min(340px,32%);
     }
 }
 
@@ -14,4 +15,25 @@
 
 .cards.light{
     background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+}
+
+@media only screen and (max-width:1024px){
+    .card_main{
+        width: max(48%,320px);
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .card_main {
+        width: min(400px,70%);
+    }
+    .cards{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .card_main {
+        width: max(280px,100%);
+    }
 }
