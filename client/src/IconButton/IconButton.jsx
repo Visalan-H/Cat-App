@@ -1,22 +1,26 @@
-import React, { useState } from 'react'
+import React,{useState} from 'react'
 import './IconButton.css'
-function IconButton({text,icon,status,like}) {
+function IconButton({ text, icon, status, vote}) {
 
-  let {upvote}=like || false;
-  
-  
-  let suffix;
-  if (text === "Edit") {
-    suffix = "ed";
+  const [like, setLike] = useState(false);
+
+  const handleLike = () => {
+    setLike(!like);
   }
-  else {
-    suffix = "d";
-  }
+
+  let clbfn = (status)?status:handleLike;  
+  let isActive;
+
+  if (vote) isActive = (text === "Upvote") ? vote.upvote : vote.downvote;
+  
+  else isActive=like;
+
+  let suffix = (text === "Edit") ? "ed" : "d";
 
   return (
-    <button className="button_main light" onClick={status} id={text}>
-      {`${text}${text==="Like" ? suffix : ''}`}
-      <i className={`fa-${text==="Like" ? 'solid' : 'regular'} fa-${icon} ${upvote ? 'liked' : ''} light`}></i>
+    <button className="button_main light" onClick={clbfn} id={text}>
+      {`${text}${isActive ? suffix : ''}`}
+      <i className={`fa-${isActive ? 'solid' : 'regular'} fa-${icon} ${isActive ? 'liked' : ''} light`}></i>
     </button>
 
   )

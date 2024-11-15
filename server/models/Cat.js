@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose';
+const mongoose = require('mongoose')
 
-const catSchema = new Schema({
+const catSchema = new mongoose.Schema({
     name: {type:String,required: true},
     description: String,
     number: Number,
@@ -11,4 +11,6 @@ const catSchema = new Schema({
     downvotes: Number
 }, {timestamps: true}); 
 
-export default model('Cat', catSchema);
+// export default model('Cat', catSchema);
+const Cat=mongoose.model('cat',catSchema);
+module.exports=Cat;

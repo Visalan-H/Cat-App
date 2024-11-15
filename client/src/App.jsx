@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import './App.css'
 import Card from './Card/Card'
 import Header from './Header/Header'
+// import axios from 'axios'
 function App() {
 
   const renderCards = () => {
@@ -12,6 +14,9 @@ function App() {
     return cards;
   };
 
+  // useEffect(()=>{
+  //   axios.get('localhost/cats');
+  // },[])
 
   return (
     <>
