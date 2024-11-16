@@ -1,0 +1,1 @@
+export const mongoDBURL = "mongodb+srv://vizz-alan:vizz1234@mycluster.lqoft.mongodb.net/catsdb?retryWrites=true&w=majority&appName=myCluster";
