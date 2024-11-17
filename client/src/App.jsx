@@ -1,31 +1,20 @@
-import { useEffect } from 'react';
 import './App.css'
-import Card from './Card/Card'
-import Header from './Header/Header'
-import axios from 'axios'
+import { Routes, Route } from 'react-router-dom';
+import Create from './pages/Create'
+import Delete from './pages/Delete'
+import Edit from './pages/Edit'
+import Home from './pages/Home'
+import DisplayOne from './pages/DisplayOne'
+
 function App() {
-
-  const renderCards = () => {
-    let cards = [];
-
-    for (let i = 0; i < 100; i++) {
-      cards.push(<Card key={i} n={i} />);
-    }
-    return cards;
-  };
-
-  useEffect(()=>{
-    axios.get('http://localhost:3000/cats')
-      .then(res => console.log(res))
-  },[])
-
   return (
-    <>
-      <Header />
-      <div className="cards light">
-        {renderCards()}
-      </div>
-    </>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/cats/create' element={<Create />} />
+        <Route path='/cats/display' element={<DisplayOne />} />
+        <Route path='/cats/edit' element={<Edit />} />
+        <Route path='/cats/delete' element={<Delete />} />
+      </Routes>
   )
 }
 

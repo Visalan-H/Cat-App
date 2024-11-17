@@ -10,6 +10,7 @@ app.use(cors({
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders:['Content-Type']    
 }))
+
 app.use(express.json())
 app.use('/cats',router)
 
@@ -18,5 +19,5 @@ mongoose.connect(mongoDBURL)
     .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
-    res.send('<p>hello</p>')
+    res.redirect('/cats')
 })

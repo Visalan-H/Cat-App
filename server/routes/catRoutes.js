@@ -38,7 +38,8 @@ router.post('/add', (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const idCat = await Cat.findById(req.params.id);
-        res.status(200).json(idCat);
+        if(idCat)   res.status(200).json(idCat);
+        else res.status(404).json({message:"Cat not found"})
     } catch (error) {
         console.log(error.message);
         res.status(500).send(error.message)
