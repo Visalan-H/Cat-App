@@ -4,14 +4,12 @@ import Create from './pages/Create'
 import Delete from './pages/Delete'
 import Edit from './pages/Edit'
 import Home from './pages/Home'
-import DisplayOne from './pages/DisplayOne'
 
 function App() {
   return (
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cats/create' element={<Create />} />
-        <Route path='/cats/display' element={<DisplayOne />} />
         <Route path='/cats/edit' element={<Edit />} />
         <Route path='/cats/delete' element={<Delete />} />
       </Routes>
