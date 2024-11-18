@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import './Header.css';
 
 function Header() {
-    // const [menuOpen, setMenuOpen] = useState(false);
     const [dark, setDark] = useState(true);
 
-
-    // const toggleMenu = () => {
-    //     setMenuOpen(!menuOpen);
-    // };
 
     const toggleColor = () => {
         let prev = dark ? 'light' : 'dark';

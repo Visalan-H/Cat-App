@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get('http://localhost:3000/cats')
+        axios.get('http://192.168.1.7:3000/cats')
             .then((res) => {
                 setCards(res.data.data);
                 setLoading(false);
