@@ -16,11 +16,10 @@ function Card(props) {
     }
 
     return (
-        <div className='mainmain'>
             <div className={`card_main light ${flip ? "flip" : ""}`}>
                 <div className='front'>
                     <div className="image">
-                        <img src={`cats/cat.${props.n}.jpg`} alt="cat" />
+                        <img src={(props.image.toUpperCase() !== "DUMMY.PNG") ? "http://localhost:3000/"+props.image : `cats/cat.${props.n}.jpg`} alt="cat" />
                     </div>
                     <div className="content">
                         <h3 className='light'>{props.name}</h3>
@@ -42,11 +41,10 @@ function Card(props) {
                         <i className="fa-solid fa-xmark" onClick={handleFlip}></i>
                         <div className="line"></div>
                     </div>
+                        <h4>coming soon..</h4>
 
                 </div>
             </div>
-        </div>
-
     )
 }
 

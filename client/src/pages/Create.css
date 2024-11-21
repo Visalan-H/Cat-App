@@ -123,3 +123,7 @@
         width: 90%;
     }
 }
+
+.main_create.dark{
+    background-color: #000;
+}
