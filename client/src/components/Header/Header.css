@@ -1,5 +1,7 @@
 .header_main {
-    z-index: 1;
+    z-index: 10000000;  
+    position: fixed;
+    top: 0;
     background-color: #2a2438;
     padding: 0 6.65%;
     border-bottom: 1px solid #777;
@@ -14,6 +16,7 @@
 .logo {
     flex-basis: 15%;
     cursor: pointer;
+
     & h2.light {
         background: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
         color: transparent;
@@ -26,9 +29,11 @@
     background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
     color: #2a2438;
 }
-.righthehe{
+
+.righthehe {
     display: flex;
     width: 30%;
+    justify-content: end;
 }
 
 .ham_menu {
@@ -53,7 +58,6 @@
     height: 100vh;
     background-color: #203D3F;
     width: 100%;
-    z-index: 10;
     transition: all 0.5s;
     text-align: center;
 
@@ -80,6 +84,7 @@
 .menu_items.show {
     left: 0;
     transition: all 0.5s;
+    z-index: 10;
 }
 
 .nav_links {
@@ -122,8 +127,12 @@
         display: none;
     }
 
-    .ham_menu {
+    .ham_menu { 
         display: block;
+    }
+
+    .menu_items {
+        position: absolute;
     }
 }
 

@@ -15,11 +15,9 @@ function IconButton({ text, icon, status, vote}) {
   
   else isActive=like;
 
-  let suffix = (text === "Comment") ? "ed" : "d";
-
   return (
     <button className="button_main light" onClick={clbfn} id={text}>
-      {`${text}${isActive ? suffix : ''}`}
+      {`${text}${isActive ? 'd': ''}`}
       <i className={`fa-${isActive ? 'solid' : 'regular'} fa-${icon} ${isActive ? 'liked' : ''} light`}></i>
     </button>
 

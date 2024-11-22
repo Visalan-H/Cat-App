@@ -38,7 +38,7 @@ function Create() {
       axios.post('http://localhost:3000/cats/add',
         formData,
         { headers: { "Content-Type": "multipart/form-data", } })
-        .then(navigate('/', { state: { scrollToId: newCardId }, replace: true }));
+        .then(navigate('/'));
 
     } catch (error) {
       console.log(error);
