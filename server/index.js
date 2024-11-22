@@ -1,8 +1,12 @@
 import mongoose from 'mongoose';
 import express from 'express';
-import { mongoDBURL } from './config.js';
 import router from './routes/catRoutes.js';
 import cors from 'cors'
+import dotenv from 'dotenv'
+
+dotenv.config();
+const mongoDBURL = process.env.mongoDBURL;
+
 const app = express();
 
 // app.use(cors({
