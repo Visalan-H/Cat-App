@@ -8,13 +8,6 @@ dotenv.config();
 const mongoDBURL = process.env.mongoDBURL;
 
 const app = express();
-
-// app.use(cors({
-//     origin: "http://192.168.1.7:5173",
-//     methods:['GET','POST','PUT','DELETE'],
-//     allowedHeaders:['Content-Type']    
-// }))
-
 app.use(cors())
 
 app.use(express.json())
