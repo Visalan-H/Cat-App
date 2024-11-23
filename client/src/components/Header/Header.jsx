@@ -4,8 +4,10 @@ import './Header.css';
 function Header() {
     const [dark, setDark] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
+    let a = document.body;
 
     const toggleMenu = () => {
+        a.style.overflow = (!menuOpen ? 'hidden' : 'auto');
         setMenuOpen(!menuOpen);
     };
 
@@ -28,16 +30,20 @@ function Header() {
             </div>
             <div className="nav_links">
                 <h3><a href='/'>Home</a></h3>
+                <h3><a title='not developed yet' href='/'>My Cats</a></h3>
                 <h3><a href='/cats/create'>create</a></h3>
-                {/* <h3><a href='/cats/mycats'>Services</a></h3>
-                <h3><a href='/cats/mycats/deletecat'>Blog</a></h3>
-                <h3><a href='/cats/mycats/editcat'>Contact</a></h3> */}
+                <h3><a title='not developed yet' href='/'>Delete</a></h3>
+                <h3><a title='not developed yet' href='/'>Edit</a></h3>
             </div>
             <div className='righthehe'>
-                <button className="toggledark" style={{ color: 'black' }} onClick={toggleColor}><i className={`fa fa-${dark?'moon':'sun'}`}></i></button>
+                <button className="toggledark" style={{ color: 'black' }} onClick={toggleColor}>
+                    <i className={`fa fa-${dark ? 'moon' : 'sun'}`} title='This feature hasnt been fully developed yet.'></i>
+                </button>
+
                 <div className="ham_menu" onClick={toggleMenu}>
                     <i className="fa fa-align-right"></i>
                 </div>
+
             </div>
             <div className={`menu_items ${menuOpen ? 'show' : ''} padded`}>
                 <a href='/' onClick={toggleMenu}>
@@ -45,21 +51,6 @@ function Header() {
                 </a>
                 <a href='/cats/create' onClick={toggleMenu}>
                     <h3>Create</h3>
-                </a>
-                <a href='#services' onClick={toggleMenu}>
-                    <h3>Services</h3>
-                </a>
-                <a href='#portfolio' onClick={toggleMenu}>
-                    <h3>Portfolio</h3>
-                </a>
-                <a href='#pricing' onClick={toggleMenu}>
-                    <h3>Pricing</h3>
-                </a>
-                <a href='#blogs' onClick={toggleMenu}>
-                    <h3>Blog</h3>
-                </a>
-                <a href='#contact' onClick={toggleMenu}>
-                    <h3>Contact</h3>
                 </a>
             </div>
         </div>

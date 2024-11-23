@@ -3,12 +3,13 @@
 /* light : #FFECD2 */
 
 .main_create {
+    margin-top: 120px;
     display: flex;
-    border: 1px solid #000;
+    border: 1px solid #2a2438;
     min-height: 83.5dvh;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #2a2438;
 }
 
 .myform {
@@ -23,7 +24,7 @@
     padding: 0 2.65%;
     text-align: center;
     background-color: #ffecd2;
-    color: black;
+    color: #2a2438;
 
     & h3 {
         margin-top: 15px;
@@ -36,11 +37,14 @@
 
         & input {
             min-height: 50px;
-            border: 2px solid #fcb7a0;
             border-radius: 8px;
+            border: 2px solid #fcb7a0;
             padding: 10px;
             font-size: 14px;
             margin-bottom: 15px;
+        }
+        & input:focus{
+            border-color: #000 !important;
         }
 
         & label {
@@ -56,7 +60,7 @@
 .formbutton {
     width: 60%;
     height: 50px;
-    color: black;
+    color: #2a2438;
     background-color: #ffecd2;
     border: 3px solid #fcb7a0;
     border-radius: 10px;

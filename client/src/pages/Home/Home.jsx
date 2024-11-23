@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect, useRef } from 'react'
-import Header from '../components/Header/Header';
-import Card from '../components/Card/Card';
-import Loading from '../components/Loading/Loading';
+import Header from '../../components/Header/Header';
+import Card from '../../components/Card/Card';
+import Loading from '../../components/Loading/Loading';
 import './Home.css'
 
 function Home() {
@@ -22,15 +22,15 @@ function Home() {
     }, [])
 
     const renderCards = () => {
-        return cards.map((card,i)=>(
-            <Card key={card._id} n={i} name={card.name} description={card.description} image={card.image}/>
+        return cards.map((card, i) => (
+            <Card key={card._id} n={i} name={card.name} description={card.description} image={card.image} />
         ))
     };
     return (
         <div >
             <Header />
-            {loading    ? <Loading /> 
-                        : <div className='cards light'>{renderCards()}</div>}    
+            {loading ? <Loading />
+                : <div className='cards light'>{renderCards()}</div>}
         </div>
     )
 }

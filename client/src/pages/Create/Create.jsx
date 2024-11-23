@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Header from '../components/Header/Header';
+import Header from '../../components/Header/Header';
 import './Create.css'
 import axios from 'axios';
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function Create() {
 
   const navigate = useNavigate()
@@ -53,16 +53,16 @@ function Create() {
           <h3>ADD YOUR CAT!</h3>
           <div className='inputs'>
             <label htmlFor='name'>Name<span className='mand' dangerouslySetInnerHTML={{ __html: '&ast;' }}></span></label>
-            <input id="name" type="text" value={name} onChange={(e) => handleChange(e)} placeholder='name' />
+            <input id="name" type="text" value={name} onChange={(e) => handleChange(e)} placeholder='name' required/>
 
             <label htmlFor='email'>Email</label>
-            <input id="email" type="email" value={email} onChange={(e) => handleChange(e)} placeholder='email' />
+            <input id="email" type="email" value={email} onChange={(e) => handleChange(e)} placeholder='email' required/>
 
             <label htmlFor='description'>Description</label>
             <input id="description" type="text" value={description} onChange={(e) => handleChange(e)} placeholder='description' />
 
             <label htmlFor='image'>Image<span dangerouslySetInnerHTML={{ __html: '&ast;' }} className='mand'></span></label>
-            <input id="image" type="file" onChange={(e) => handleChange(e)} accept="image/*" className='file-input' />
+            <input id="image" type="file" onChange={(e) => handleChange(e)} accept="image/*" className='file-input' required/>
             {image && (
               <div className="image-preview">
                 <div className='submit'>
